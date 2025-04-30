@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">MyISAMM</string>
+
+    <!-- Connexion -->
+    <string name="login_title">Hey, Bienvenue</string>
+    <string name="login_subtitle">Veuillez vous connecter à votre compte</string>
+    <string name="email_label">E-mail</string>
+    <string name="password_label">Mot de passe</string>
+    <string name="email_hint">Entrez votre e-mail</string>
+    <string name="password_hint">Entrez votre mot de passe</string>
+    <string name="forgot_password">Mot de passe oublié</string>
+    <string name="log_in">Se connecter</string>
+    <string name="no_account">Vous n'avez pas de compte ?</string>
+    <string name="sign_up_link">S'inscrire</string>
+
+    <!-- Inscription -->
+    <string name="signup_title">Veuillez créer votre compte</string>
+    <string name="confirm_password_label">Confirmer le mot de passe</string>
+    <string name="confirm_password_hint">Confirmez votre mot de passe</string>
+    <string name="sign_up">S'inscrire</string>
+
+    <!-- Sélection du rôle -->
+    <string name="role_student">Étudiant</string>
+    <string name="role_professor">Professeur</string>
+
+    <!-- Accueil -->
+    <string name="welcome">Bienvenue !</string>
+    <string name="username_placeholder">Nom d'utilisateur</string>
+    <string name="clubs">Clubs</string>
+    <string name="home_tab">Accueil</string>
+    <string name="my_courses_tab">Mes cours</string>
+    <string name="my_profile_tab">Mon profil</string>
+    <string name="about_tab">À propos</string>
+    <string name="university_image_desc">Image du bâtiment de l'université ISAMM</string>
+    <string name="user_profile_icon_desc">Icône du profil utilisateur</string>
+
+    <!-- Sélection du département -->
+    <string name="choose_department">Choisissez votre département</string>
+    <string name="department_multimedia">Département Multimédia</string>
+    <string name="department_audiovisuel">Département Audiovisuel</string>
+    <string name="department_informatique">Département Informatique</string>
+
+    <!-- Catégories -->
+    <string name="previous_categories">Catégories précédentes</string>
+    <string name="category_placeholder_desc">Placeholder pour l'élément de catégorie</string>
+
+    <!-- Commun -->
+    <string name="back_button_desc">Retour</string>
+    <string name="logo_desc">Logo MyISAMM</string>
+    <string name="password_visibility_desc">Basculer la visibilité du mot de passe</string>
+</resources>

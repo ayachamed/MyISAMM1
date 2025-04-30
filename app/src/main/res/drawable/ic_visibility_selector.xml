@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State when password is visible -->
+    <item android:drawable="@drawable/ic_visibility_off_24" android:state_checked="true"/>
+    <!-- Default state when password is hidden -->
+    <item android:drawable="@drawable/ic_visibility_24"/>
+</selector>
