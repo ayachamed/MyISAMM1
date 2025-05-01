@@ -10,14 +10,14 @@
     <string name="password_hint">Entrez votre mot de passe</string>
     <string name="forgot_password">Mot de passe oublié</string>
     <string name="log_in">Se connecter</string>
-    <string name="no_account">Vous n'avez pas de compte ?</string>
-    <string name="sign_up_link">S'inscrire</string>
+    <string name="no_account">Vous n\'avez pas de compte ?</string>
+    <string name="sign_up_link">S\'inscrire</string>
 
     <!-- Inscription -->
     <string name="signup_title">Veuillez créer votre compte</string>
     <string name="confirm_password_label">Confirmer le mot de passe</string>
     <string name="confirm_password_hint">Confirmez votre mot de passe</string>
-    <string name="sign_up">S'inscrire</string>
+    <string name="sign_up">S\'inscrire</string>
 
     <!-- Sélection du rôle -->
     <string name="role_student">Étudiant</string>
@@ -25,13 +25,13 @@
 
     <!-- Accueil -->
     <string name="welcome">Bienvenue !</string>
-    <string name="username_placeholder">Nom d'utilisateur</string>
+    <string name="username_placeholder">Nom d\'utilisateur</string>
     <string name="clubs">Clubs</string>
     <string name="home_tab">Accueil</string>
     <string name="my_courses_tab">Mes cours</string>
     <string name="my_profile_tab">Mon profil</string>
     <string name="about_tab">À propos</string>
-    <string name="university_image_desc">Image du bâtiment de l'université ISAMM</string>
+    <string name="university_image_desc">Image du bâtiment de l\'université ISAMM</string>
     <string name="user_profile_icon_desc">Icône du profil utilisateur</string>
 
     <!-- Sélection du département -->
@@ -42,10 +42,22 @@
 
     <!-- Catégories -->
     <string name="previous_categories">Catégories précédentes</string>
-    <string name="category_placeholder_desc">Placeholder pour l'élément de catégorie</string>
+    <string name="category_placeholder_desc">Placeholder pour l\'élément de catégorie</string>
 
     <!-- Commun -->
     <string name="back_button_desc">Retour</string>
     <string name="logo_desc">Logo MyISAMM</string>
     <string name="password_visibility_desc">Basculer la visibilité du mot de passe</string>
+    <string name="department_icon_desc" />
+    <string name="title_home" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_departments" />
+    <string name="title_profile" />
+    <string name="desc_profile_picture" />
+    <string name="action_logout" />
+    <string name="title_about" />MyISAMM 1.0
+    <string name="desc_app_logo" />
+    <string name="about_text" />This app is developed by
+    <string name="link_isamm_website" />myisamm.com
 </resources>
