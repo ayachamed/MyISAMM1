@@ -119,9 +119,7 @@ The database should be structured to represent the hierarchy. Example Firestore 
         *   `departmentId`: "informatique"
         *   `programId`: "mime"
         *   ... other hierarchy levels ...
-
-*(Note: The specific structure needs to be implemented based on the chosen database - Firestore or Realtime Database - and populated initially)*
-
+        *   
 ## Key Concepts Learned/Applied
 
 *   Firebase Integration (Auth, Firestore/RTDB, Storage)
@@ -137,9 +135,6 @@ The database should be structured to represent the hierarchy. Example Firestore 
 
 ## Future Improvements
 
-*   Implement distinct Professor/Student roles with different permissions.
 *   Add search functionality for materials.
 *   Implement offline caching/access for downloaded materials.
-*   Add notifications for new material uploads.
 *   Improve error handling and user feedback.
-*   Refine UI/UX.
