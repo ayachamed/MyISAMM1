@@ -26,7 +26,7 @@
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
             app:strokeColor="@color/colorPrimaryBlue"
             app:strokeWidth="2dp"
-            tools:src="@drawable/ic_default_profile" />
+            tools:src="@drawable/ic_profile" />
         <!-- Make sure ic_default_profile drawable and desc_profile_picture string exist -->
         <!-- You'll need to define the ShapeAppearanceOverlay style -->
 
@@ -75,9 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/action_logout"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="@color/bottomNavIconTintActive"
             app:icon="@drawable/ic_logout"
-            app:iconTint="@android:color/holo_red_dark"
+            app:iconTint="@color/bottomNavIconTintActive"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
