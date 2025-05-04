@@ -5,57 +5,30 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
-    <!-- Home Destination -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.myisamm.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-    <!-- Ensure HomeFragment.java and fragment_home.xml exist -->
-    <!-- Ensure @string/title_home exists in strings.xml -->
+    tools:layout="@layout/fragment_home" />
 
-    <!-- Department Selection / Courses Destination -->
     <fragment
-        android:id="@+id/navigation_department_selection"
+        android:id="@+id/navigation_courses"
         android:name="com.example.myisamm.ui.departments.DepartmentSelectionFragment"
-        android:label="@string/title_departments"
-        tools:layout="@layout/fragment_department_selection" />
-    <!-- Ensure DepartmentSelectionFragment.java and fragment_department_selection.xml exist -->
-    <!-- Ensure @string/title_departments exists in strings.xml -->
+        android:label="@string/my_courses_tab"
+    tools:layout="@layout/fragment_department_selection" />
 
-    <!-- Profile Destination (Placeholder) -->
+    <!-- Profile Destination -->
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.myisamm.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
-    <!-- TODO: Create ProfileFragment.java and fragment_profile.xml -->
-    <!-- Ensure @string/title_profile exists in strings.xml -->
+    tools:layout="@layout/fragment_profile" />
 
-    <!-- About Destination (Placeholder) -->
+    <!-- About Destination -->
     <fragment
         android:id="@+id/navigation_about"
         android:name="com.example.myisamm.ui.about.AboutFragment"
         android:label="@string/title_about"
-        tools:layout="@layout/fragment_about" />
-    <!-- TODO: Create AboutFragment.java and fragment_about.xml -->
-    <!-- Ensure @string/title_about exists in strings.xml -->
-
-    <!-- Add other destinations (like Categories, Materials List) and actions between them later -->
-    <!-- Example:
-    <fragment
-        android:id="@+id/navigation_categories"
-        android:name="com.example.myisamm.ui.categories.CategoriesFragment"
-        android:label="Categories"
-        tools:layout="@layout/fragment_categories" >
-        <argument
-            android:name="departmentId"
-            app:argType="string" />
-    </fragment>
-
-    <action
-        android:id="@+id/action_departmentSelection_to_categories"
-        app:destination="@id/navigation_categories" />
-    -->
+    tools:layout="@layout/fragment_about" />
 
 </navigation>
