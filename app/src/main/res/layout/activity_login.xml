@@ -8,7 +8,8 @@
     android:paddingStart="24dp"
     android:paddingEnd="24dp"
     android:background="@color/white"
-    tools:context=".LoginActivity"> <!-- Assuming LoginActivity exists -->
+    tools:context=".LoginActivity">
+
 
     <!-- Title -->
     <TextView

@@ -3,7 +3,7 @@
 
     <!-- Connexion -->
     <string name="login_title">Hey, Bienvenue</string>
-    <string name="login_subtitle">Veuillez vous connecter à votre compte</string>
+    <string name="login_subtitle">Connecter à votre compte</string>
     <string name="email_label">E-mail</string>
     <string name="password_label">Mot de passe</string>
     <string name="email_hint">Entrez votre e-mail</string>
@@ -15,8 +15,8 @@
 
     <!-- Inscription -->
     <string name="signup_title">Veuillez créer votre compte</string>
-    <string name="confirm_password_label">Confirmer le mot de passe</string>
-    <string name="confirm_password_hint">Confirmez votre mot de passe</string>
+    <string name="confirm_password_label">Confirmer votre mot de passe</string>
+    <string name="confirm_password_hint">Confirmez mot de passe</string>
     <string name="sign_up">S\'inscrire</string>
 
     <!-- Sélection du rôle -->
