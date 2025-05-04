@@ -5,30 +5,32 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+    <!-- Home Destination -->
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.myisamm.ui.home.HomeFragment"
-        android:label="@string/title_home"
+    android:name="com.example.myisamm.ui.home.HomeFragment"
+    android:label="@string/title_home"
     tools:layout="@layout/fragment_home" />
 
+    <!-- Courses Destination -->
     <fragment
         android:id="@+id/navigation_courses"
-        android:name="com.example.myisamm.ui.departments.DepartmentSelectionFragment"
-        android:label="@string/my_courses_tab"
-    tools:layout="@layout/fragment_department_selection" />
+    android:name="com.example.myisamm.ui.departments.DepartmentSelectionFragment"
+    android:label="@string/my_courses_tab"
+    tools:layout="@layout/fragment_department_selection" /> <!-- Verify layout file -->
 
     <!-- Profile Destination -->
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.myisamm.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
-    tools:layout="@layout/fragment_profile" />
+    android:name="com.example.myisamm.ui.profile.ProfileFragment"
+    android:label="@string/title_profile"
+    tools:layout="@layout/fragment_profile" /> <!-- Verify layout file -->
 
     <!-- About Destination -->
     <fragment
         android:id="@+id/navigation_about"
-        android:name="com.example.myisamm.ui.about.AboutFragment"
-        android:label="@string/title_about"
+    android:name="com.example.myisamm.ui.about.AboutFragment"
+    android:label="@string/title_about"
     tools:layout="@layout/fragment_about" />
 
 </navigation>
