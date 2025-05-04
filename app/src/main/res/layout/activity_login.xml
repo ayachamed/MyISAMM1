@@ -152,25 +152,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/no_account_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/no_account"
-            android:textColor="@color/textColorSecondary"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/signup_link_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:text="@string/sign_up_link"
-            android:textColor="@color/colorPrimaryBlue"
-            android:textSize="14sp"
-            android:textStyle="bold" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_account"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="625dp" />
+
+    <TextView
+        android:id="@+id/signup_link_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/sign_up_link"
+        android:textColor="@color/colorPrimaryBlue"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="625dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

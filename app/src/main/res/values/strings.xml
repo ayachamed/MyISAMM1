@@ -12,7 +12,7 @@
     <string name="log_in">Se connecter</string>
     <string name="no_account">Vous n\'avez pas de compte ?</string>
     <string name="sign_up_link">S\'inscrire</string>
-
+    <string name="club_logo_desc">Logo du club</string>
     <!-- Inscription -->
     <string name="signup_title">Veuillez créer votre compte</string>
     <string name="confirm_password_label">Confirmer votre mot de passe</string>
