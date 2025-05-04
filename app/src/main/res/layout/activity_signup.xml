@@ -8,7 +8,7 @@
     android:paddingStart="24dp"
     android:paddingEnd="24dp"
     android:background="@color/white"
-    tools:context=".SignupActivity"> <!-- Assuming SignupActivity exists -->
+    tools:context=".SignupActivity">
 
     <!-- Title -->
     <TextView
@@ -22,6 +22,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Username Label -->
+    <TextView
+        android:id="@+id/username_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/username_placeholder"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_title_text" />
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/home_username_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="username"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/username_placeholder"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textColorHint="@color/hintColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username_label" />
+
     <!-- Email Label -->
     <TextView
         android:id="@+id/signup_email_label"
@@ -33,7 +63,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signup_title_text" />
+        app:layout_constraintTop_toBottomOf="@id/home_username_text" />
 
     <!-- Email Input -->
     <EditText
@@ -140,8 +170,6 @@
             android:textColorHint="@color/hintColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
     <!-- Signup Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signup_button"
@@ -157,6 +185,21 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_layout" /> <!-- Change top constraint if RadioGroup added -->
+        app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_layout" />
+
+    <TextView
+        android:id="@+id/signup_login_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/compte_exist"
+        android:textColor="@color/bottomNavIconTintActive"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:clickable="true"
+    android:focusable="true"
+    app:layout_constraintTop_toBottomOf="@id/signup_button"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

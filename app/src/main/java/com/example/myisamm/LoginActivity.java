@@ -1,55 +1,74 @@
 package com.example.myisamm;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class LoginActivity extends AppCompatActivity {
 
-    EditText emailInput, passwordInput;
-    Button loginButton;
+    private EditText emailInput, passwordInput;
+    private Button loginButton;
+    private TextView signUpLink;
 
-    private final String validEmail = "test@example.com";
-    private final String validPassword = "123456";
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Check login state
-        SharedPreferences prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-        boolean isLoggedIn = prefs.getBoolean("isLoggedIn", false);
-        if (isLoggedIn) {
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+
+        // Redirect if already logged in
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
             startActivity(new Intent(this, MainActivity.class));
             finish();
             return;
         }
 
-        // Get UI references AFTER setContentView
+        // UI elements
         emailInput = findViewById(R.id.login_email_input);
         passwordInput = findViewById(R.id.login_password_input);
         loginButton = findViewById(R.id.login_button);
+        signUpLink = findViewById(R.id.signup_link_text);  // Get reference to sign up link
 
         loginButton.setOnClickListener(view -> {
             String email = emailInput.getText().toString().trim();
             String password = passwordInput.getText().toString().trim();
 
-            if (email.equals(validEmail) && password.equals(validPassword)) {
-                // Save login state
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.putBoolean("isLoggedIn", true);
-                editor.apply();
-
-                // Navigate
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish(); // prevent back to login
-            } else {
-                Toast.makeText(this, "Compte invalide !", Toast.LENGTH_SHORT).show();
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            // Firebase login
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // Login success
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            finish();
+                        } else {
+                            // Login failed
+                            Toast.makeText(LoginActivity.this, "Échec d'authentification.", Toast.LENGTH_SHORT).show();
+                        }
+                    });
         });
+
+        // Handle Sign Up link click
+        signUpLink.setOnClickListener(view -> {
+            // Navigate to SignUpActivity
+            startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+        });
+
+
+
     }
 }

@@ -2,13 +2,13 @@
     <string name="app_name">MyISAMM</string>
 
     <!-- Connexion -->
-    <string name="login_title">Hey, Bienvenue</string>
-    <string name="login_subtitle">Connecter à votre compte</string>
+    <string name="login_title">Bienvenue , مرحبا بيك !</string>
+    <string name="login_subtitle">Connectez à votre compte</string>
     <string name="email_label">E-mail</string>
     <string name="password_label">Mot de passe</string>
     <string name="email_hint">Entrez votre e-mail</string>
     <string name="password_hint">Entrez votre mot de passe</string>
-    <string name="forgot_password">Mot de passe oublié</string>
+    <string name="forgot_password"></string>
     <string name="log_in">Se connecter</string>
     <string name="no_account">Vous n\'avez pas de compte ?</string>
     <string name="sign_up_link">S\'inscrire</string>
@@ -55,9 +55,11 @@
     <string name="title_departments" />
     <string name="title_profile" />
     <string name="desc_profile_picture" />
-    <string name="action_logout" />
+    <string name="action_logout">Se déconnecter</string> <!-- Added logout string here -->
     <string name="title_about" />MyISAMM 1.0
     <string name="desc_app_logo" />
     <string name="about_text" />This app is developed by
     <string name="link_isamm_website" />myisamm.com
+    <string name="desc_logout_button" />
+    <string name="compte_exist">Vous avez déjà un compte ? Se connecter</string>Se Déconnecter
 </resources>
