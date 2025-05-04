@@ -26,6 +26,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimaryBlue"
         app:titleTextColor="@color/white"
+        app:title="MyISAMM"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" /> <!-- Standard theme -->
 
 </com.google.android.material.appbar.AppBarLayout>
@@ -58,5 +59,7 @@ app:itemIconTint="@color/bottom_nav_color_selector"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:elevation="4dp"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
