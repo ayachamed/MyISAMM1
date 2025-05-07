@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/email_label"
-        android:textColor="@color/textColorPrimary"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +54,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
         android:autofillHints="emailAddress"
         android:background="@drawable/edit_text_background"
         android:hint="@string/email_hint"
@@ -90,7 +91,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_password_label"
-        app:passwordToggleDrawable="@drawable/ic_visibility_selector"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/textColorSecondary">
 
@@ -98,6 +98,7 @@
             android:id="@+id/login_password_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
             android:autofillHints="password"
             android:background="@drawable/edit_text_background"
             android:hint="@string/password_hint"
@@ -107,7 +108,6 @@
             android:paddingEnd="48dp"
             android:paddingBottom="16dp"
             android:textColorHint="@color/hintColor" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Forgot Password Link -->
@@ -141,7 +141,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/forgot_password_link" />
 
-    <!-- Signup Link Container -->
     <!-- Signup Link Container -->
     <LinearLayout
         android:id="@+id/signup_link_container"
@@ -178,20 +177,12 @@
         android:id="@+id/imageView"
         android:layout_width="169dp"
         android:layout_height="164dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="508dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/CircleImageView" />
-    <ProgressBar
-        android:id="@+id/loading_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_gravity="center"
-        style="?android:attr/progressBarStyleLarge" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

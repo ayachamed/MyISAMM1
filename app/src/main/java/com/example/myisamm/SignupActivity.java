@@ -11,7 +11,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -19,6 +21,8 @@ public class SignupActivity extends AppCompatActivity {
     private TextInputEditText passwordInput, confirmPasswordInput;
     private Button signupButton;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+    private TextInputLayout passwordLayout, confirmPasswordLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,7 @@ public class SignupActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance(); // Initialize Firestore
 
         // Get references to views
         usernameInput = findViewById(R.id.home_username_text);
@@ -34,6 +39,14 @@ public class SignupActivity extends AppCompatActivity {
         passwordInput = findViewById(R.id.signup_password_input);
         confirmPasswordInput = findViewById(R.id.signup_confirm_password_input);
         signupButton = findViewById(R.id.signup_button);
+
+        // Reference to the TextInputLayouts for password fields
+        passwordLayout = findViewById(R.id.signup_password_layout);
+        confirmPasswordLayout = findViewById(R.id.signup_confirm_password_layout);
+
+        // Enable password toggle for both password fields (no need for manual handling)
+        passwordLayout.setPasswordVisibilityToggleEnabled(true);
+        confirmPasswordLayout.setPasswordVisibilityToggleEnabled(true);
 
         signupButton.setOnClickListener(view -> {
             String username = usernameInput.getText().toString().trim();
@@ -62,23 +75,57 @@ public class SignupActivity extends AppCompatActivity {
                 return;
             }
 
-            // Create user with Firebase
+            // Create user with Firebase Auth
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
-                            Toast.makeText(SignupActivity.this, "Inscription réussie", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(SignupActivity.this, LoginActivity.class));
-                            finish();
+                            // Get the user ID (UID) from FirebaseAuth
+                            String userId = mAuth.getCurrentUser().getUid();
+
+                            // Create a user object to save in Firestore
+                            User user = new User(username, email);
+
+                            // Save user to Firestore
+                            db.collection("users") // "users" is the Firestore collection
+                                    .document(userId) // Use the user ID as the document ID
+                                    .set(user) // Set the user data in Firestore
+                                    .addOnSuccessListener(aVoid -> {
+                                        Toast.makeText(SignupActivity.this, "Inscription réussie", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                                        finish();
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(SignupActivity.this, "Échec de l'inscription dans Firestore: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                                    });
                         } else {
                             Toast.makeText(SignupActivity.this, "Échec de l'inscription: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });
         });
+
         TextView loginLink = findViewById(R.id.signup_login_link);
         loginLink.setOnClickListener(v -> {
             startActivity(new Intent(SignupActivity.this, LoginActivity.class));
             finish();
         });
+    }
 
+    // User class to store user details in Firestore
+    public static class User {
+        private String username;
+        private String email;
+
+        public User(String username, String email) {
+            this.username = username;
+            this.email = email;
+        }
+
+        public String getUsername() {
+            return username;
+        }
+
+        public String getEmail() {
+            return email;
+        }
     }
 }

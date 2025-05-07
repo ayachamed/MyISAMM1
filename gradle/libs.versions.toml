@@ -10,6 +10,10 @@ playServicesMaps = "19.2.0"
 navigationUi = "2.8.9"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.2.0"
+firebaseDatabase = "21.0.0"
+firebase-firestore = "25.1.4"
+
+  # Changed from firebase-database to firebaseDatabase for consistency
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -21,8 +25,9 @@ navigation-fragment = { group = "androidx.navigation", name = "navigation-fragme
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firebase-firestore" }  # Add this line
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
-

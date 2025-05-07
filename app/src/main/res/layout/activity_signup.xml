@@ -50,6 +50,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/username_label" />
 
     <!-- Email Label -->
@@ -78,6 +79,7 @@
         android:padding="16dp"
         android:textColorHint="@color/hintColor"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_email_label" />
@@ -107,7 +109,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_password_label"
-        app:passwordToggleDrawable="@drawable/ic_visibility_selector"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/textColorSecondary">
 
@@ -116,6 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="newPassword"
+            android:textColor="@android:color/black"
             android:background="@drawable/edit_text_background"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
@@ -151,7 +153,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_label"
-        app:passwordToggleDrawable="@drawable/ic_visibility_selector"
+
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/textColorSecondary">
 
@@ -159,6 +161,7 @@
             android:id="@+id/signup_confirm_password_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
             android:autofillHints="password"
             android:background="@drawable/edit_text_background"
             android:hint="@string/confirm_password_hint"
@@ -187,6 +190,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_layout" />
 
+    <!-- Login Link -->
     <TextView
         android:id="@+id/signup_login_link"
         android:layout_width="wrap_content"
@@ -194,12 +198,12 @@
         android:layout_marginTop="16dp"
         android:text="@string/compte_exist"
         android:textColor="@color/bottomNavIconTintActive"
-    android:textSize="14sp"
-    android:textStyle="bold"
-    android:clickable="true"
-    android:focusable="true"
-    app:layout_constraintTop_toBottomOf="@id/signup_button"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/signup_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

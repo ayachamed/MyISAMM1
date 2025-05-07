@@ -33,16 +33,20 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.navigation.fragment)
     implementation(libs.play.services.maps)
     implementation(libs.navigation.ui)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.database)
+
+    // Firestore Dependency
+    implementation(libs.firebase.firestore) // Ensure this is listed correctly
+     // or latest
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
 }

@@ -10,18 +10,23 @@
         android:id="@+id/navigation_home"
         android:name="com.example.myisamm.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-    <!-- Ensure HomeFragment.java and fragment_home.xml exist -->
-    <!-- Ensure @string/title_home exists in strings.xml -->
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_department_selection"
+            app:destination="@id/navigation_department_selection" />
+    </fragment>
 
-    <!-- Department Selection / Courses Destination -->
+    <!-- Department Selection Destination -->
     <fragment
         android:id="@+id/navigation_department_selection"
         android:name="com.example.myisamm.ui.departments.DepartmentSelectionFragment"
         android:label="@string/title_departments"
-        tools:layout="@layout/fragment_department_selection" />
-    <!-- Ensure DepartmentSelectionFragment.java and fragment_department_selection.xml exist -->
-    <!-- Ensure @string/title_departments exists in strings.xml -->
+        tools:layout="@layout/fragment_department_selection">
+        <!-- Example of passing arguments (you can define your own) -->
+        <argument
+            android:name="departmentId"
+            app:argType="string" />
+    </fragment>
 
     <!-- Profile Destination (Placeholder) -->
     <fragment
@@ -29,8 +34,6 @@
         android:name="com.example.myisamm.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
-    <!-- TODO: Create ProfileFragment.java and fragment_profile.xml -->
-    <!-- Ensure @string/title_profile exists in strings.xml -->
 
     <!-- About Destination (Placeholder) -->
     <fragment
@@ -38,24 +41,5 @@
         android:name="com.example.myisamm.ui.about.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about" />
-    <!-- TODO: Create AboutFragment.java and fragment_about.xml -->
-    <!-- Ensure @string/title_about exists in strings.xml -->
-
-    <!-- Add other destinations (like Categories, Materials List) and actions between them later -->
-    <!-- Example:
-    <fragment
-        android:id="@+id/navigation_categories"
-        android:name="com.example.myisamm.ui.categories.CategoriesFragment"
-        android:label="Categories"
-        tools:layout="@layout/fragment_categories" >
-        <argument
-            android:name="departmentId"
-            app:argType="string" />
-    </fragment>
-
-    <action
-        android:id="@+id/action_departmentSelection_to_categories"
-        app:destination="@id/navigation_categories" />
-    -->
 
 </navigation>

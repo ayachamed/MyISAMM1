@@ -11,23 +11,23 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="16dp"
         android:clipToPadding="false">
 
+        <!-- Welcome Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/home_welcome_card"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/backgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -42,86 +42,72 @@
                     android:contentDescription="@string/user_profile_icon_desc"
                     android:padding="12dp"
                     android:src="@drawable/ic_profile"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:tint="@android:color/black"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@android:color/black" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
                 <TextView
                     android:id="@+id/home_welcome_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:text="@string/welcome"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/home_profile_icon"
-                    app:layout_constraintTop_toTopOf="@id/home_profile_icon" />
-
-                <TextView
-                    android:id="@+id/home_username_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:text="Bienvenue, Utilisateur inconnu!"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
-                    android:textStyle="normal"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="@id/home_profile_icon"
                     app:layout_constraintBottom_toBottomOf="@id/home_profile_icon"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/home_welcome_text"
-                    app:layout_constraintTop_toBottomOf="@id/home_welcome_text"
-                    tools:text="@string/username_placeholder" />
+                    app:layout_constraintStart_toEndOf="@id/home_profile_icon"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- University Image Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/home_image_card"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="20dp"
             app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/home_welcome_card"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_welcome_card">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
                 android:id="@+id/home_university_image"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:contentDescription="@string/university_image_desc"
                 android:scaleType="centerCrop"
-                android:src="@drawable/building_placeholder" />
-
+                android:contentDescription="@string/university_image_desc"
+                android:src="@drawable/building_placeholder"/>
         </androidx.cardview.widget.CardView>
 
+        <!-- Clubs Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/home_clubs_card"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_image_card"
-            app:layout_constraintVertical_bias="0.485">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp">
+                android:padding="16dp">
 
                 <TextView
                     android:id="@+id/home_clubs_title"
@@ -131,22 +117,18 @@
                     android:layout_marginBottom="12dp"
                     android:text="@string/clubs"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/home_clubs_recycler_view"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/home_clubs_viewpager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:clipToPadding="false"
                     android:orientation="horizontal"
                     android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:itemCount="5"
-                    tools:listitem="@layout/item_club_logo" />
-
+                    android:paddingEnd="16dp" />
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

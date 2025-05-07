@@ -26,7 +26,7 @@
     <!-- Accueil -->
     <string name="welcome">Bienvenue !</string>
     <string name="username_placeholder">Nom d\'utilisateur</string>
-    <string name="clubs">Clubs</string>
+    <string name="clubs">CLUBS</string>
     <string name="home_tab">Accueil</string>
     <string name="my_courses_tab">Mes cours</string>
     <string name="my_profile_tab">Mon profil</string>
@@ -50,16 +50,26 @@
     <string name="password_visibility_desc">Basculer la visibilité du mot de passe</string>
     <string name="department_icon_desc" />
     <string name="title_home" />
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_departments" />
     <string name="title_profile" />
     <string name="desc_profile_picture" />
     <string name="action_logout">Se déconnecter</string> <!-- Added logout string here -->
     <string name="title_about" />MyISAMM 1.0
-    <string name="desc_app_logo" />
-    <string name="about_text" />This app is developed by
-    <string name="link_isamm_website" />myisamm.com
-    <string name="desc_logout_button" />
-    <string name="compte_exist">Vous avez déjà un compte ? Se connecter</string>Se Déconnecter
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Français</item>
+    </string-array>
+    <string name="desc_app_logo">App logo</string>
+    <string name="about_text">MyISAMM est une application destinée aux étudiants de l’ISAMM. Elle offre un accès rapide aux ressources, notifications et outils académiques personnalisés.</string>
+    <string name="about_devs">Développée par : Adam Jebali &amp; Mohamed Ayacha</string>
+    <string name="about_tech_stack">Technologies utilisées : Android Studio, Firebase, Java, Figma</string>
+    <string name="link_isamm_website">https://isa2m.rnu.tn/</string>
+    <string name="compte_exist">Vouz avez deja un compte ? Retour</string>
+    <string name="desc_logout_button">desc layout\n</string>
+    <string name="club_image_desc">Les clubs de l\'ISAMM</string>
+    <string name="desc_map_view">Map</string>
+    <string name="google_maps_api_key">AIzaSyC4ccjtSgTQ01knrKrUivJQDOfu5TLZHJ4</string>
 </resources>
