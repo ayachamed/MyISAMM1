@@ -1,136 +1,136 @@
-# My ISAMM - Android Education App
+# My ISAMM - Application Éducative Android
 
-## Project Overview
+## Aperçu du Projet
 
-My ISAMM is an Android application developed using Java Native for managing and accessing educational materials, similar in concept to a simplified Moodle. It allows users to browse course materials organized hierarchically by department, program, year, semester, course, and section. Initially, all authenticated users can also upload materials. The application heavily utilizes Firebase for backend services including authentication, database, and file storage.
+My ISAMM est une application Android développée en Java Natif pour la gestion et l'accès à des supports pédagogiques, similaire dans son concept à un Moodle simplifié. Elle permet aux utilisateurs de parcourir les supports de cours organisés hiérarchiquement par département, filière, année, semestre, matière et section. Initialement, tous les utilisateurs authentifiés peuvent également téléverser des supports. L'application utilise intensivement Firebase pour les services backend, y compris l'authentification, la base de données et le stockage de fichiers.
 
-This project was developed as part of an educational requirement, focusing on core Android development principles and Firebase integration.
+Ce projet a été développé dans le cadre d'une exigence pédagogique, en se concentrant sur les principes fondamentaux du développement Android et l'intégration de Firebase.
 
-## Features
+## Fonctionnalités
 
-*   **User Authentication:**
-    *   Email/Password based Sign Up and Login.
-    *   Persistent login state using Firebase Authentication.
-*   **Material Browsing:**
-    *   Hierarchical navigation through educational structure:
-        *   Department (Multimedia, Informatique, Audiovisuel)
-        *   Program (e.g., CMM, MIME, Montage)
-        *   Year
-        *   Semester
-        *   Course
-        *   Section (e.g., TD, TP, Cours)
-    *   Dynamic loading of categories and materials from Firebase.
-*   **Technical Features:**
-    *   Built with Java Native for Android.
-    *   Utilizes multiple Activities/Fragments for navigation and functionality.
-    *   Implements various UI Widgets (`Button`, `EditText`, `TextView`, `ImageView`, `RecyclerView`, `CardView`).
-    *   Handles data passing between screens (e.g., selected category IDs).
-    *   Gracefully handles orientation changes, preserving essential state using appropriate Android lifecycle methods or ViewModels.
-    *   Leverages Firebase for backend:
-        *   **Firebase Authentication:** User management.
-        *   **Firebase Firestore/Realtime Database:** Storing hierarchical structure and file metadata.
-        *   **Firebase Storage:** Storing uploaded files.
+*   **Authentification Utilisateur :**
+    *   Inscription et Connexion basées sur Email/Mot de passe.
+    *   État de connexion persistant utilisant Firebase Authentication.
+*   **Navigation dans les Supports :**
+    *   Navigation hiérarchique à travers la structure pédagogique :
+        *   Département (Multimédia, Informatique, Audiovisuel)
+        *   Filière (ex: CMM, MIME, Montage)
+        *   Année
+        *   Semestre
+        *   Matière
+        *   Section (ex: TD, TP, Cours)
+    *   Chargement dynamique des catégories et des supports depuis Firebase.
+*   **Fonctionnalités Techniques :**
+    *   Développée avec Java Natif pour Android.
+    *   Utilise plusieurs Activités/Fragments pour la navigation et les fonctionnalités.
+    *   Implémente divers Widgets UI (`Button`, `EditText`, `TextView`, `ImageView`, `RecyclerView`, `CardView`).
+    *   Gère le passage de données entre les écrans (ex: IDs des catégories sélectionnées).
+    *   Gère correctement les changements d'orientation, en préservant l'état essentiel à l'aide des méthodes de cycle de vie Android appropriées ou des ViewModels.
+    *   S'appuie sur Firebase pour le backend :
+        *   **Firebase Authentication :** Gestion des utilisateurs.
+        *   **Firebase Firestore/Realtime Database :** Stockage de la structure hiérarchique et des métadonnées des fichiers.
+        *   **Firebase Storage :** Stockage des fichiers téléversés.
 
-## Technology Stack
+## Stack Technologique
 
-*   **Language:** Java
-*   **Platform:** Android Native
-*   **IDE:** Android Studio
-*   **Backend Services:** Firebase
+*   **Langage :** Java
+*   **Plateforme :** Android Natif
+*   **IDE :** Android Studio
+*   **Services Backend :** Firebase
     *   Authentication
-    *   Firestore (or Realtime Database - specify final choice)
+    *   Realtime Database
     *   Storage
 
-
-## Screenshots
+## Captures d'écran
 ![MyISAMM](https://github.com/user-attachments/assets/cf0d0f2e-b637-4fa9-beaa-59647ec05bff)
 
-1.  **Login Screen:** Fields for Email, Password, "Log In" button, "Forgot Password" link, and link to Sign Up.
-2.  **Sign Up Screen:** Fields for Email, Password, Confirm Password, "Sign up" button. Includes app logo (`MyISAMM`).
-3.  **Home/Dashboard Screen:** Welcome message with Username, potentially an image related to ISAMM, navigation options (e.g., "Clubs", main content area). Includes bottom navigation bar (Home, My Courses, My Profile, About).
-4.  **Department Selection Screen:** List of departments (Multimedia, Audiovisuel, Informatique) presented likely using CardViews or a similar list format with icons. Includes bottom navigation bar.
-5.  **Category/Sub-Category Screen:** Placeholder view showing navigation hierarchy (e.g., "Catégories Précédentes"), indicating further drill-down levels, likely using RecyclerView with CardViews. Includes bottom navigation bar.
+1.  **Écran de Connexion :** Champs pour Email, Mot de passe, bouton "Se connecter", lien "Mot de passe oublié" et lien vers l'Inscription.
+2.  **Écran d'Inscription :** Champs pour Email, Mot de passe, Confirmer le mot de passe, bouton "S'inscrire". Inclut le logo de l'application (`MyISAMM`).
+3.  **Écran d'Accueil/Tableau de Bord :** Message de bienvenue avec le nom d'utilisateur, potentiellement une image liée à l'ISAMM, options de navigation (ex: "Clubs", zone de contenu principal). Inclut une barre de navigation inférieure (Accueil, Mes Cours, Mon Profil, À Propos).
+4.  **Écran de Sélection des Départements :** Liste des départements (Multimédia, Audiovisuel, Informatique) présentée probablement à l'aide de CardViews ou d'un format de liste similaire avec des icônes. Inclut une barre de navigation inférieure.
+5.  **Écran de Catégorie/Sous-Catégorie :** Vue de remplacement montrant la hiérarchie de navigation (ex: "Catégories Précédentes"), indiquant des niveaux d'exploration plus profonds, utilisant probablement RecyclerView avec des CardViews. Inclut une barre de navigation inférieure.
 
-## Project Structure Highlights
+## Points Clés de la Structure du Projet
 
-*   The application utilizes multiple Activities (e.g., `LoginActivity`, `SignUpActivity`, `MainActivity`) and potentially Fragments for different sections like browsing or profile management, fulfilling the requirement of using at least 2 Activities or 2 Fragments.
-*   Data is passed between Activities/Fragments using `Intent` extras or `Bundle` arguments.
-*   UI Layouts are defined in XML, making use of `ConstraintLayout`, `LinearLayout`, `RecyclerView`, `CardView`, `EditText`, `Button`, `TextView`, `ImageView`.
-*   Firebase interactions are encapsulated within relevant Activities/Fragments or potentially dedicated helper classes.
+*   L'application utilise plusieurs Activités (ex: `LoginActivity`, `SignUpActivity`, `MainActivity`) et potentiellement des Fragments pour différentes sections comme la navigation ou la gestion de profil, remplissant l'exigence d'utiliser au moins 2 Activités ou 2 Fragments.
+*   Les données sont transmises entre les Activités/Fragments en utilisant les extras d'`Intent` ou les arguments de `Bundle`.
+*   Les Mises en Page UI sont définies en XML, en utilisant `ConstraintLayout`, `LinearLayout`, `RecyclerView`, `CardView`, `EditText`, `Button`, `TextView`, `ImageView`.
+*   Les interactions Firebase sont encapsulées dans les Activités/Fragments pertinents ou potentiellement dans des classes d'assistance dédiées.
 
-## Setup and Installation
+## Configuration et Installation
 
-1.  **Clone the repository:**
+1.  **Cloner le dépôt :**
     ```bash
-    git clone <your-repository-url>
-    cd <repository-directory>
+    git clone <votre-url-de-depot>
+    cd <repertoire-du-depot>
     ```
-2.  **Open in Android Studio:**
-    *   Launch Android Studio.
-    *   Select "Open an Existing Project".
-    *   Navigate to and select the cloned repository directory.
-3.  **Firebase Setup (Crucial):**
-    *   Go to the [Firebase Console](https://console.firebase.google.com/).
-    *   Create a new Firebase project.
-    *   **Register your Android app:**
-        *   Click on the Android icon to add an Android app.
-        *   Enter the package name exactly as it is in your `app/build.gradle` file (e.g., `com.example.myisamm_app`).
-        *   Provide a nickname and optionally the SHA-1 debug signing certificate fingerprint.
-    *   **Download `google-services.json`:** Download the configuration file provided by Firebase.
-    *   **Add Config File:** Place the downloaded `google-services.json` file into the `app/` directory of your Android Studio project.
-    *   **Enable Firebase Services:**
-        *   In the Firebase Console, navigate to "Authentication" -> "Sign-in method" and enable the "Email/Password" provider.
-        *   Navigate to "Firestore Database" (or "Realtime Database") and create a database. Start in **test mode** for initial development (allows open read/write) or configure security rules for authenticated users (`allow read, write: if request.auth != null;`).
-        *   Navigate to "Storage" and click "Get Started". Choose test mode or configure security rules similar to the database (`allow read, write: if request.auth != null;`).
-    *   **Sync Project:** Sync your Android Studio project with Gradle files (`File -> Sync Project with Gradle Files`).
-4.  **Build and Run:**
-    *   Select a target device (emulator or physical device).
-    *   Click the "Run" button (green play icon) in Android Studio.
+2.  **Ouvrir dans Android Studio :**
+    *   Lancez Android Studio.
+    *   Sélectionnez "Open an Existing Project" (Ouvrir un projet existant).
+    *   Naviguez vers le répertoire du dépôt cloné et sélectionnez-le.
+3.  **Configuration de Firebase (Crucial) :**
+    *   Allez sur la [Console Firebase](https://console.firebase.google.com/).
+    *   Créez un nouveau projet Firebase.
+    *   **Enregistrez votre application Android :**
+        *   Cliquez sur l'icône Android pour ajouter une application Android.
+        *   Entrez le nom du package exactement tel qu'il est dans votre fichier `app/build.gradle` (ex: `com.example.myisamm_app`).
+        *   Fournissez un nom d'application (nickname) et optionnellement l'empreinte du certificat de signature de débogage SHA-1.
+    *   **Téléchargez `google-services.json` :** Téléchargez le fichier de configuration fourni par Firebase.
+    *   **Ajoutez le Fichier de Configuration :** Placez le fichier `google-services.json` téléchargé dans le répertoire `app/` de votre projet Android Studio.
+    *   **Activez les Services Firebase :**
+        *   Dans la Console Firebase, naviguez vers "Authentication" -> "Méthode de connexion" et activez le fournisseur "Email/Password".
+        *   Naviguez vers "Firestore Database" (ou "Realtime Database") et créez une base de données. Démarrez en **mode test** pour le développement initial (autorise la lecture/écriture ouverte) ou configurez les règles de sécurité pour les utilisateurs authentifiés (`allow read, write: if request.auth != null;`).
+        *   Naviguez vers "Storage" et cliquez sur "Commencer". Choisissez le mode test ou configurez des règles de sécurité similaires à la base de données (`allow read, write: if request.auth != null;`).
+    *   **Synchronisez le Projet :** Synchronisez votre projet Android Studio avec les fichiers Gradle (`File -> Sync Project with Gradle Files`).
+4.  **Compiler et Exécuter :**
+    *   Sélectionnez un appareil cible (émulateur ou appareil physique).
+    *   Cliquez sur le bouton "Exécuter" (icône de lecture verte) dans Android Studio.
 
-## Firebase Data Structure (Example - Firestore)
+## Structure des Données Firebase (Exemple - Firestore)
 
-The database should be structured to represent the hierarchy. Example Firestore structure:
+La base de données doit être structurée pour représenter la hiérarchie. Exemple de structure Firestore :
 
-*   **Collection:** `departments`
-    *   **Document:** `multimedia` (ID: `multimedia`)
-        *   `name`: "Départemant Multimédia"
-        *   **Subcollection:** `programs`
-            *   **Document:** `cmm` (ID: `cmm`)
+*   **Collection :** `departments`
+    *   **Document :** `multimedia` (ID: `multimedia`)
+        *   `name`: "Département Multimédia"
+        *   **Sous-collection :** `programs`
+            *   **Document :** `cmm` (ID: `cmm`)
                 *   `name`: "CMM"
-                *   **Subcollection:** `years` -> `semesters` -> `courses` -> `sections` -> `materials` (metadata docs)
-            *   **Document:** `cc_3d` (ID: `cc_3d`) ...
-            *   **Document:** `mdca` (ID: `mdca`) ...
-    *   **Document:** `informatique` (ID: `informatique`)
-        *   `name`: "Départemant Informatique"
-        *   **Subcollection:** `programs`
-            *   **Document:** `mime` (ID: `mime`) ...
-            *   **Document:** `jv` (ID: `jv`) ...
-*   **Collection:** `materials` (Alternative top-level collection for metadata, referencing paths)
-    *   **Document:** `<unique_material_id>`
-        *   `fileName`: "Lecture 1.pdf"
-        *   `storagePath`: "/materials/informatique/mime/year1/sem1/courseA/td/Lecture 1.pdf"
+                *   **Sous-collection :** `years` -> `semesters` -> `courses` -> `sections` -> `materials` (documents de métadonnées)
+            *   **Document :** `cc_3d` (ID: `cc_3d`) ...
+            *   **Document :** `mdca` (ID: `mdca`) ...
+    *   **Document :** `informatique` (ID: `informatique`)
+        *   `name`: "Département Informatique"
+        *   **Sous-collection :** `programs`
+            *   **Document :** `mime` (ID: `mime`) ...
+            *   **Document :** `jv` (ID: `jv`) ...
+*   **Collection :** `materials` (Collection alternative de haut niveau pour les métadonnées, référençant les chemins)
+    *   **Document :** `<id_unique_support>`
+        *   `fileName`: "Cours 1.pdf"
+        *   `storagePath`: "/materials/informatique/mime/annee1/sem1/matiereA/td/Cours 1.pdf"
         *   `uploaderId`: "<firebase_user_uid>"
-        *   `timestamp`: Timestamp
+        *   `timestamp`: Horodatage
         *   `departmentId`: "informatique"
         *   `programId`: "mime"
-        *   ... other hierarchy levels ...
-        *   
-## Key Concepts Learned/Applied
+        *   ... autres niveaux hiérarchiques ...
 
-*   Firebase Integration (Auth, Firestore/RTDB, Storage)
-*   Activity & Fragment Lifecycles
-*   Android UI Design with XML (ConstraintLayout, LinearLayout, etc.)
-*   Using common Android Widgets (`EditText`, `Button`, `TextView`, `ImageView`)
-*   Implementing `RecyclerView` with `ViewHolder` and `Adapter` patterns for dynamic lists.
-*   Using `CardView` for modern UI elements.
-*   Navigation between Activities/Fragments using Intents/Bundles.
-*   Handling Asynchronous operations (Firebase callbacks/listeners).
-*   Requesting Runtime Permissions (e.g., for file access/storage).
-*   Basic State Management during Orientation Changes (e.g., using `onSaveInstanceState` or `ViewModel`).
+## Concepts Clés Appris/Appliqués
 
-## Future Improvements
+*   Intégration Firebase (Auth, Firestore/RTDB, Storage)
+*   Cycles de Vie des Activités & Fragments
+*   Conception UI Android avec XML (ConstraintLayout, LinearLayout, etc.)
+*   Utilisation des Widgets Android courants (`EditText`, `Button`, `TextView`, `ImageView`)
+*   Implémentation de `RecyclerView` avec les modèles `ViewHolder` et `Adapter` pour les listes dynamiques.
+*   Utilisation de `CardView` pour des éléments UI modernes.
+*   Navigation entre Activités/Fragments utilisant Intents/Bundles.
+*   Gestion des opérations Asynchrones (callbacks/listeners Firebase).
+*   Demande des Permissions d'Exécution (ex: pour l'accès/stockage de fichiers).
+*   Gestion de l'État de Base lors des Changements d'Orientation (ex: en utilisant `onSaveInstanceState` ou `ViewModel`).
 
-*   Add search functionality for materials.
-*   Implement offline caching/access for downloaded materials.
-*   Improve error handling and user feedback.
-"# MyISAMM2" 
+## Améliorations Futures
+
+*   Ajouter une fonctionnalité de recherche pour les supports.
+*   Implémenter la mise en cache/accès hors ligne pour les supports téléchargés.
+*   Améliorer la gestion des erreurs et les retours utilisateur.
+
+# MyISAMM2
