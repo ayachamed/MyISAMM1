@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myisamm"> <!-- Replace with your actual package name -->
 
-    <!-- Add permissions for location -->
+    <!-- Permissions for Location (already present, good for Profile map) -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Permission for Internet (Required for Firebase, opening links, downloading files) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permission for writing to external storage (for DownloadManager to public directories on older APIs) -->
+    <!-- maxSdkVersion="28" means this permission is only requested on Android 9 (Pie) and below.
+         On Android 10+ (API 29+), DownloadManager can write to public directories like Downloads
+         without this permission due to Scoped Storage. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Permission to query all packages (needed on Android 11+ if you intend to open various file types
+         with external apps and don't know exactly which apps the user has installed)
+         Consider if truly needed. If you only open common types like PDF, this might be overkill.
+         Alternatively, specify queries for specific intents/MIME types if known. -->
+    <!-- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+                     tools:ignore="QueryAllPackagesPermission" /> -->
+
 
     <application
         android:allowBackup="true"
@@ -15,14 +34,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyISAMM"
-        tools:targetApi="31">
+        tools:targetApi="31"> <!-- targetApi can also be just a number like "33" or "34" -->
 
-        <!-- Google Maps API Key -->
+        <!--
+            IMPORTANT: Google Maps API Key Placement
+            The previous method of using @string/google_maps_api_key is NOT recommended for security.
+            Follow these steps:
+            1. Add to your project's `gradle.properties` file (and add `gradle.properties` to .gitignore):
+               GOOGLE_MAPS_API_KEY="YOUR_ACTUAL_API_KEY_HERE"
+
+            2. In your app-level `build.gradle.kts` (or build.gradle if using Groovy):
+               android {
+                   ...
+                   defaultConfig {
+                       ...
+                       // For accessing from manifest (preferred for API keys used by libraries like Maps)
+                       manifestPlaceholders = [ googleMapsApiKey: providers.getProperty("GOOGLE_MAPS_API_KEY") ?: "YOUR_DEFAULT_KEY_FOR_DEBUG_IF_ANY" ]
+                   }
+               }
+            3. Then, use the placeholder here in the manifest:
+        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_api_key" />
+            android:value="${googleMapsApiKey}" /> <!-- Use placeholder -->
 
-        <activity android:name=".MainActivity" />
+
+        <!-- MainActivity: Changed exported to false as it's not the launcher and usually launched internally -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" /> <!-- Optional: helps with keyboard overlap -->
 
         <activity
             android:name=".LoginActivity"
@@ -33,7 +74,24 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SignupActivity" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" /> <!-- Optional: if signup has no action bar -->
+
+        <!--
+            FileProvider for opening downloaded files securely (if using Option 2 in MaterialListFragment)
+            Ensure your package name is correct in 'android:authorities'.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" /> <!-- Create res/xml/file_paths.xml -->
+        </provider>
+
     </application>
 
 </manifest>
