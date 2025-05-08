@@ -132,5 +132,3 @@ La base de données doit être structurée pour représenter la hiérarchie. Exe
 *   Ajouter une fonctionnalité de recherche pour les supports.
 *   Implémenter la mise en cache/accès hors ligne pour les supports téléchargés.
 *   Améliorer la gestion des erreurs et les retours utilisateur.
-
-# MyISAMM2
