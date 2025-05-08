@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_home"
     android:title="@string/home_tab" />
     <item
-        android:id="@+id/navigation_courses"
+        android:id="@+id/navigation_courses_department"
         android:icon="@drawable/ic_courses"
     android:title="@string/my_courses_tab" />
     <item

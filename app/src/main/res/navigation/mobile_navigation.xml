@@ -12,30 +12,66 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_home_to_department_selection"
-            app:destination="@id/navigation_department_selection" />
+            android:id="@+id/action_home_to_courses_department"
+            app:destination="@id/navigation_courses_department" />
     </fragment>
 
-    <!-- Department Selection Destination -->
+    <!-- Department Selection Destination (Entry point for 'Mes cours') -->
     <fragment
-        android:id="@+id/navigation_department_selection"
-        android:name="com.example.myisamm.ui.departments.DepartmentSelectionFragment"
-        android:label="@string/title_departments"
+        android:id="@+id/navigation_courses_department"
+        android:name="com.example.myisamm.ui.courses.DepartmentSelectionFragment"
+        android:label="@string/title_choose_department"
         tools:layout="@layout/fragment_department_selection">
-        <!-- Example of passing arguments (you can define your own) -->
+        <action
+            android:id="@+id/action_department_to_category"
+            app:destination="@id/navigation_category_selection" />
+    </fragment>
+
+    <!-- Reusable Category Selection Fragment -->
+    <fragment
+        android:id="@+id/navigation_category_selection"
+        android:name="com.example.myisamm.ui.courses.CategorySelectionFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_categories">
         <argument
-            android:name="departmentId"
+            android:name="firebasePath"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="currentLevel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_category_to_self"
+            app:destination="@id/navigation_category_selection" />
+        <action
+            android:id="@+id/action_category_to_material_list"
+            app:destination="@id/navigation_material_list" />
+    </fragment>
+
+    <!-- Material List Fragment -->
+    <fragment
+        android:id="@+id/navigation_material_list"
+        android:name="com.example.myisamm.ui.courses.MaterialListFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_material_list">
+        <argument
+            android:name="firebasePath"
+            app:argType="string" />
+        <argument
+            android:name="title"
             app:argType="string" />
     </fragment>
 
-    <!-- Profile Destination (Placeholder) -->
+    <!-- Profile Destination -->
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.myisamm.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
-    <!-- About Destination (Placeholder) -->
+    <!-- About Destination -->
     <fragment
         android:id="@+id/navigation_about"
         android:name="com.example.myisamm.ui.about.AboutFragment"
