@@ -3,17 +3,20 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
-    android:title="@string/home_tab" />
+        android:title="@string/title_home" />
+
     <item
-        android:id="@+id/navigation_courses"
-        android:icon="@drawable/ic_courses"
-    android:title="@string/my_courses_tab" />
+        android:id="@+id/navigation_courses_department"
+    android:icon="@drawable/ic_courses"
+    android:title="@string/title_my_courses" />
+
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"
-    android:title="@string/my_profile_tab" />
+        android:title="@string/title_profile" />
+
     <item
         android:id="@+id/navigation_about"
         android:icon="@drawable/ic_about"
-    android:title="@string/about_tab" />
+        android:title="@string/title_about" />
 </menu>

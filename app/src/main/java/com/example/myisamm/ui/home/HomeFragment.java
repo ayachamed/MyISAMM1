@@ -32,13 +32,15 @@ public class HomeFragment extends Fragment {
     private int currentPage = 0;
 
     private int[] clubImages = {
+            R.drawable.club,
             R.drawable.club1,
             R.drawable.club2,
             R.drawable.club3,
             R.drawable.club4,
             R.drawable.club5,
             R.drawable.club6,
-            R.drawable.club7
+            R.drawable.club7,
+            R.drawable.club8
     };
 
     private final Runnable autoScrollRunnable = new Runnable() {
