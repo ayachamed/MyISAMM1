@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         // The addOnDestinationChangedListener below will override it.
         // If you want NavigationUI to manage titles based on fragment labels,
         // you might not need this custom toolbarTitle handling.
-
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // Disable default title
         // Initialize Firebase components
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();

@@ -21,13 +21,16 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ClubViewHolder
 
     // Array of URLs for each club
     private String[] clubUrls = {
+            "https://www.facebook.com/profile.php?id=61567247850707",
             "https://www.facebook.com/robotiqueisamm/",
             "https://www.facebook.com/OrendaJE",
-            "https://www.facebook.com/profile.php?id=61567247850707",
             "https://www.facebook.com/IsammMicrosoftClub",
             "https://www.facebook.com/profile.php?id=100087931522321",
             "https://www.facebook.com/LOGISAMM",
-            "https://www.facebook.com/music.club.isamm"
+            "https://www.facebook.com/music.club.isamm",
+            "https://www.facebook.com/ClubJ2I",
+            "https://www.facebook.com/profile.php?id=61551015728123"
+
     };
 
     public ClubAdapter(int[] clubImages, Context context) {
