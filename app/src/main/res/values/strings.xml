@@ -2,20 +2,20 @@
     <string name="app_name">MyISAMM</string>
 
     <!-- Titles for Navigation (Ensure these are used by navigation graph labels and BottomNav menu) -->
-    <string name="title_home">Accueil</string> <!-- ALREADY PRESENT, used for Home tab -->
-    <string name="title_my_courses">Mes Cours</string> <!-- ALREADY PRESENT, used for "Mes cours" tab -->
-    <string name="title_profile">Mon Profil</string> <!-- ALREADY PRESENT, used for Profile tab -->
-    <string name="title_about">À Propos</string> <!-- ALREADY PRESENT, used for About tab -->
-    <string name="title_choose_department">Choisir Département</string> <!-- ALREADY PRESENT, used as label for DepartmentSelectionFragment -->
+    <string name="title_home">Accueil</string>
+    <string name="title_my_courses">Mes Cours</string>
+    <string name="title_profile">Mon Profil</string>
+    <string name="title_about">À Propos</string>
+    <string name="title_choose_department">Choisir Département</string>
 
 
     <!-- Strings for CategorySelectionFragment and MaterialListFragment -->
-    <string name="no_items_found">Aucun élément trouvé.</string> <!-- For empty RecyclerView states -->
-    <string name="error_loading_data">Erreur de chargement des données.</string> <!-- For Firebase data loading errors -->
+    <string name="no_items_found">Aucun élément trouvé.</string>
+    <string name="error_loading_data">Erreur de chargement des données.</string>
 
     <!-- Strings for MaterialListFragment (File/Link handling) -->
-    <string name="downloading_file">Téléchargement de %1$s…</string> <!-- %1$s will be replaced by filename -->
-    <string name="download_failed">Échec du téléchargement: %1$s</string> <!-- %1$s will be error message -->
+    <string name="downloading_file">Téléchargement de %1$s…</string>
+    <string name="download_failed">Échec du téléchargement: %1$s</string>
     <string name="download_manager_not_available">Gestionnaire de téléchargement non disponible.</string>
     <string name="could_not_open_link">Impossible d\'ouvrir le lien.</string>
     <string name="link_url_missing">URL du lien manquante.</string>
@@ -56,18 +56,18 @@
     <string name="choose_department">Choisissez votre département</string>
 
 
-    <string name="previous_categories">Catégories précédentes</string> <!-- Could be useful for breadcrumbs if implemented -->
+    <string name="previous_categories">Catégories précédentes</string>
     <string name="category_placeholder_desc">Placeholder pour l\'élément de catégorie</string>
 
     <string name="back_button_desc">Retour</string>
     <string name="logo_desc">Logo MyISAMM</string>
     <string name="password_visibility_desc">Basculer la visibilité du mot de passe</string>
-    <string name="department_icon_desc">Icône du département</string> <!-- Added text -->
+    <string name="department_icon_desc">Icône du département</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string> <!-- Standard placeholder, remove if not used -->
-    <string name="desc_profile_picture">Photo de profil</string> <!-- Added text -->
-    <string name="desc_logout_button">Bouton de déconnexion</string> <!-- Corrected description -->
-    <string name="desc_map_view">Vue de la carte</string> <!-- Added text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_profile_picture">Photo de profil</string>
+    <string name="desc_logout_button">Bouton de déconnexion</string>
+    <string name="desc_map_view">Vue de la carte</string>
 
     <string name="action_logout">Se déconnecter</string>
 

@@ -9,13 +9,13 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Custom Colors from Design -->
-    <color name="colorPrimaryBlue">#3498DB</color> <!-- Approximate blue from buttons/logo -->
-    <color name="colorPrimaryDarkBlue">#2587C8</color> <!-- Darker shade for status bar -->
+    <color name="colorPrimaryBlue">#3498DB</color>
+    <color name="colorPrimaryDarkBlue">#2587C8</color>
     <color name="colorAccent">#3498DB</color>
     <color name="textColorPrimary">#333333</color>
     <color name="textColorSecondary">#757575</color>
     <color name="hintColor">#BDBDBD</color>
-    <color name="backgroundColor">#F5F5F5</color> <!-- Light grey background -->
+    <color name="backgroundColor">#F5F5F5</color>
     <color name="cardBackgroundColor">#FFFFFF</color>
     <color name="bottomNavIconTint">#757575</color>
     <color name="bottomNavIconTintActive">@color/colorPrimaryBlue</color>
