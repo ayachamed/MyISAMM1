@@ -10,7 +10,7 @@
     tools:context=".LoginActivity">
 
 
-    <!-- Title -->
+
     <TextView
         android:id="@+id/login_title_text"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Subtitle -->
+
     <TextView
         android:id="@+id/login_subtitle_text"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_title_text" />
 
-    <!-- Email Label -->
+
     <TextView
         android:id="@+id/login_email_label"
         android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_subtitle_text" />
 
-    <!-- Email Input -->
+
     <EditText
         android:id="@+id/login_email_input"
         android:layout_width="0dp"
@@ -66,7 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_email_label" />
 
-    <!-- Password Label -->
+
     <TextView
         android:id="@+id/login_password_label"
         android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_email_input" />
 
-    <!-- Password Input Layout -->
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_password_layout"
         android:layout_width="0dp"
@@ -110,7 +110,7 @@
             android:textColorHint="@color/hintColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Forgot Password Link -->
+
     <TextView
         android:id="@+id/forgot_password_link"
         android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_password_layout" />
 
-    <!-- Login Button -->
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_button"
         android:layout_width="0dp"
@@ -141,7 +141,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/forgot_password_link" />
 
-    <!-- Signup Link Container -->
+
     <LinearLayout
         android:id="@+id/signup_link_container"
         android:layout_width="wrap_content"

@@ -47,13 +47,13 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ClubViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ClubViewHolder holder, int position) {
-        // Set the club image
+
         holder.clubImage.setImageResource(clubImages[position]);
 
         // Set click listener for each image
         holder.clubImage.setOnClickListener(v -> {
-            String clubName = "Club " + (position + 1);  // You can add specific names here
-            String url = clubUrls[position]; // Get the URL for the clicked club
+            String clubName = "Club " + (position + 1);
+            String url = clubUrls[position];
 
             if (url != null) {
                 // Open the link in a browser
@@ -76,7 +76,7 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ClubViewHolder
 
         public ClubViewHolder(View itemView) {
             super(itemView);
-            clubImage = itemView.findViewById(R.id.club_image);  // Make sure this ID matches in the layout
+            clubImage = itemView.findViewById(R.id.club_image);
         }
     }
 }

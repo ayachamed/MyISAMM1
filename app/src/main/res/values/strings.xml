@@ -25,8 +25,7 @@
     <string name="no_app_to_open_file">Aucune application trouvée pour ouvrir ce type de fichier.</string>
     <string name="could_not_create_temp_file">Impossible de créer un fichier temporaire.</string>
 
-    <!-- Connexion -->
-    <string name="login_title">Bienvenue</string>
+    <string name="login_title">Bienvenue , مرحبا !</string>
     <string name="login_subtitle">Connectez à votre compte</string>
     <string name="email_label">E-mail</string>
     <string name="password_label">Mot de passe</string>
@@ -36,19 +35,16 @@
     <string name="no_account">Vous n\'avez pas de compte ?</string>
     <string name="sign_up_link">S\'inscrire</string>
 
-    <!-- Inscription -->
     <string name="signup_title">Veuillez créer votre compte</string>
     <string name="confirm_password_label">Confirmer votre mot de passe</string>
     <string name="confirm_password_hint">Confirmez mot de passe</string>
     <string name="sign_up">S\'inscrire</string>
     <string name="compte_exist">Vouz avez deja un compte ?</string>
 
-    <!-- Sélection du rôle (If used during signup or profile) -->
     <string name="role_student">Étudiant</string>
     <string name="role_professor">Professeur</string>
 
-    <!-- Accueil -->
-    <string name="welcome">Bienvenue !</string> <!-- Generic welcome -->
+    <string name="welcome">Bienvenue !</string>
     <string name="username_placeholder">Nom d\'utilisateur</string>
     <string name="clubs">CLUBS</string>
     <string name="university_image_desc">Image du bâtiment de l\'université ISAMM</string>
@@ -60,28 +56,23 @@
     <string name="choose_department">Choisissez votre département</string>
 
 
-    <!-- Catégories (Placeholders/UI text) -->
     <string name="previous_categories">Catégories précédentes</string> <!-- Could be useful for breadcrumbs if implemented -->
     <string name="category_placeholder_desc">Placeholder pour l\'élément de catégorie</string>
 
-    <!-- Commun / Accessibility -->
     <string name="back_button_desc">Retour</string>
     <string name="logo_desc">Logo MyISAMM</string>
     <string name="password_visibility_desc">Basculer la visibilité du mot de passe</string>
     <string name="department_icon_desc">Icône du département</string> <!-- Added text -->
 
-    <!-- Placeholders & Unused/To Review -->
     <string name="hello_blank_fragment">Hello blank fragment</string> <!-- Standard placeholder, remove if not used -->
     <string name="desc_profile_picture">Photo de profil</string> <!-- Added text -->
     <string name="desc_logout_button">Bouton de déconnexion</string> <!-- Corrected description -->
     <string name="desc_map_view">Vue de la carte</string> <!-- Added text -->
 
-    <!-- Profile Screen -->
     <string name="action_logout">Se déconnecter</string>
 
-    <!-- About Screen -->
-    <!-- "title_about" is already defined above -->
-    <!-- "MyISAMM 1.0" seems to be part of the about_text or a separate version display -->
+
+
     <string name="app_version_placeholder">Version %1$s</string> <!-- For dynamic version display -->
     <string name="desc_app_logo">Logo de l\'application</string>
     <string name="about_text">MyISAMM est une application destinée aux étudiants de l’ISAMM. Elle offre un accès rapide aux ressources, notifications et outils académiques personnalisés.</string>

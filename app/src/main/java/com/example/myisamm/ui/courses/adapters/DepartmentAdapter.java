@@ -37,8 +37,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.De
     public void onBindViewHolder(@NonNull DepartmentViewHolder holder, int position) {
         CategoryItem department = departmentList.get(position);
         holder.departmentNameTextView.setText(department.getName());
-        // You can set a specific icon per department later if needed
-        // holder.departmentIconImageView.setImageResource(R.drawable.ic_some_specific_department_icon);
+
 
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {

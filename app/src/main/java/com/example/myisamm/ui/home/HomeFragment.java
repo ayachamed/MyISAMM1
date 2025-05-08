@@ -71,15 +71,15 @@ public class HomeFragment extends Fragment {
         ClubAdapter clubAdapter = new ClubAdapter(clubImages, getContext());
         clubsViewPager.setAdapter(clubAdapter);
 
-        // Optional: Fading page transformer
+
         clubsViewPager.setPageTransformer((page, position) -> {
             page.setAlpha(0.25f + (1 - Math.abs(position)));
         });
 
-        // Auto-scroll start
+
         autoScrollHandler.postDelayed(autoScrollRunnable, 3000);
 
-        // Make university image clickable
+
         ImageView universityImage = view.findViewById(R.id.home_university_image);
         universityImage.setOnClickListener(v -> {
             String url = "https://isa2m.rnu.tn/";
@@ -87,7 +87,7 @@ public class HomeFragment extends Fragment {
             startActivity(intent);
         });
 
-        // Adjust ViewPager2 sensitivity and scroll duration (smooth scroll duration)
+
         ViewPager2Utils.reduceDragSensitivity(clubsViewPager);
         ViewPager2Utils.setSmoothScrollDuration(clubsViewPager, 500);
 

@@ -3,15 +3,15 @@ package com.example.myisamm.model;
 public class MaterialItem {
     private String id;
     private String name;
-    private String type; // "FILE" or "LINK"
-    private String storagePath; // For FILE
-    private String url; // For LINK
+    private String type;
+    private String storagePath;
+    private String url;
 
     public MaterialItem() {
         // Default constructor for Firebase
     }
 
-    // Optional: Constructor for manual creation if needed
+
     public MaterialItem(String id, String name, String type, String storagePath, String url) {
         this.id = id;
         this.name = name;

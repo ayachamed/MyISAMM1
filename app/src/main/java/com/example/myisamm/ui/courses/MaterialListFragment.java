@@ -49,7 +49,7 @@ public class MaterialListFragment extends Fragment {
     private ProgressBar progressBar;
     private TextView emptyTextView;
 
-    private String firebasePath; // Path to the specific material type's list (e.g., .../materials/TP)
+    private String firebasePath;
     private ValueEventListener materialsValueListener;
     private DatabaseReference databaseReference;
 
@@ -58,7 +58,7 @@ public class MaterialListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             firebasePath = getArguments().getString("firebasePath");
-            // String fragmentTitle = getArguments().getString("title"); // Used by NavController
+
         }
     }
 
@@ -195,69 +195,9 @@ public class MaterialListFragment extends Fragment {
         });
 
 
-        // Option 2: Download to app's cache/files dir and open with Intent (more control, file is private)
-        // This example downloads to cache, then attempts to open.
-        /*
-        try {
-            final File localFile = File.createTempFile("myisamm_material_", getFileExtension(fileName), getContext().getCacheDir());
-            fileRef.getFile(localFile).addOnSuccessListener(taskSnapshot -> {
-                Log.d(TAG, "File downloaded to: " + localFile.getAbsolutePath());
-                openFile(localFile, fileName);
-            }).addOnFailureListener(e -> {
-                Log.e(TAG, "File download failed: " + storagePath, e);
-                Toast.makeText(getContext(), String.format(getString(R.string.download_failed), e.getMessage()), Toast.LENGTH_LONG).show();
-            });
-        } catch (IOException e) {
-            Log.e(TAG, "Could not create temp file", e);
-            Toast.makeText(getContext(), "Could not create temporary file.", Toast.LENGTH_SHORT).show();
-        }
-        */
     }
 
-    // Helper for Option 2 (Open file from app's private storage)
-    /*
-    private void openFile(File file, String originalFileName) {
-        if (getContext() == null) return;
-        try {
-            Uri fileUri = FileProvider.getUriForFile(getContext(), getContext().getApplicationContext().getPackageName() + ".provider", file);
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            String mimeType = getContext().getContentResolver().getType(fileUri);
-            if (mimeType == null) { // Fallback if MIME type not detected
-                mimeType = getMimeTypeFromExtension(getFileExtension(originalFileName));
-            }
-            intent.setDataAndType(fileUri, mimeType);
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Important if called from non-activity context
 
-            if (intent.resolveActivity(getContext().getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                Toast.makeText(getContext(), "No app found to open this file type.", Toast.LENGTH_LONG).show();
-            }
-        } catch (Exception e) {
-            Log.e(TAG, "Error opening file: " + file.getAbsolutePath(), e);
-            Toast.makeText(getContext(), "Could not open file: " + e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    private String getFileExtension(String fileName) {
-        if (fileName == null || !fileName.contains(".")) return "";
-        return fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
-    }
-    private String getMimeTypeFromExtension(String extension) {
-        switch (extension) {
-            case "pdf": return "application/pdf";
-            case "doc": case "docx": return "application/msword";
-            case "ppt": case "pptx": return "application/vnd.ms-powerpoint";
-            case "xls": case "xlsx": return "application/vnd.ms-excel";
-            case "txt": return "text/plain";
-            case "jpg": case "jpeg": return "image/jpeg";
-            case "png": return "image/png";
-            // Add more common types
-            default: return "* /*"; // Generic
-        }
-    }
-    */
 
 
     private void showLoading(boolean isLoading) {

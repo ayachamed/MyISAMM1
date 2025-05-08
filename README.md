@@ -40,12 +40,7 @@ This project was developed as part of an educational requirement, focusing on co
     *   Authentication
     *   Firestore (or Realtime Database - specify final choice)
     *   Storage
-*   **Key Android Libraries:**
-    *   AndroidX Libraries (AppCompat, Core, ConstraintLayout, etc.)
-    *   Material Components for Android
-    *   RecyclerView
-    *   CardView
-    *   Firebase SDKs (Auth, Firestore/RTDB, Storage)
+
 
 ## Screenshots
 ![MyISAMM](https://github.com/user-attachments/assets/cf0d0f2e-b637-4fa9-beaa-59647ec05bff)

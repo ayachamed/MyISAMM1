@@ -22,10 +22,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Initialize Firebase Auth
+
         mAuth = FirebaseAuth.getInstance();
 
-        // Redirect if already logged in
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             startActivity(new Intent(this, MainActivity.class));
@@ -33,11 +33,11 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        // UI elements
+
         emailInput = findViewById(R.id.login_email_input);
         passwordInput = findViewById(R.id.login_password_input);
         loginButton = findViewById(R.id.login_button);
-        signUpLink = findViewById(R.id.signup_link_text);  // Get reference to sign up link
+        signUpLink = findViewById(R.id.signup_link_text);
 
         loginButton.setOnClickListener(view -> {
             String email = emailInput.getText().toString().trim();

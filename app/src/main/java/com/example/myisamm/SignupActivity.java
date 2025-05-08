@@ -33,18 +33,18 @@ public class SignupActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance(); // Initialize Firestore
 
-        // Get references to views
+
         usernameInput = findViewById(R.id.home_username_text);
         emailInput = findViewById(R.id.signup_email_input);
         passwordInput = findViewById(R.id.signup_password_input);
         confirmPasswordInput = findViewById(R.id.signup_confirm_password_input);
         signupButton = findViewById(R.id.signup_button);
 
-        // Reference to the TextInputLayouts for password fields
+
         passwordLayout = findViewById(R.id.signup_password_layout);
         confirmPasswordLayout = findViewById(R.id.signup_confirm_password_layout);
 
-        // Enable password toggle for both password fields (no need for manual handling)
+
         passwordLayout.setPasswordVisibilityToggleEnabled(true);
         confirmPasswordLayout.setPasswordVisibilityToggleEnabled(true);
 
@@ -86,9 +86,9 @@ public class SignupActivity extends AppCompatActivity {
                             User user = new User(username, email);
 
                             // Save user to Firestore
-                            db.collection("users") // "users" is the Firestore collection
-                                    .document(userId) // Use the user ID as the document ID
-                                    .set(user) // Set the user data in Firestore
+                            db.collection("users")
+                                    .document(userId)
+                                    .set(user)
                                     .addOnSuccessListener(aVoid -> {
                                         Toast.makeText(SignupActivity.this, "Inscription réussie", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(SignupActivity.this, LoginActivity.class));

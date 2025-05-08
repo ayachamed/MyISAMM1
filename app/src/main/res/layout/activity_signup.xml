@@ -10,7 +10,6 @@
     android:background="@color/white"
     tools:context=".SignupActivity">
 
-    <!-- Title -->
     <TextView
         android:id="@+id/signup_title_text"
         android:layout_width="wrap_content"
@@ -22,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Username Label -->
     <TextView
         android:id="@+id/username_label"
         android:layout_width="wrap_content"
@@ -35,7 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_title_text" />
 
-    <!-- Username Input -->
     <EditText
         android:id="@+id/home_username_text"
         android:layout_width="0dp"
@@ -53,7 +50,6 @@
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/username_label" />
 
-    <!-- Email Label -->
     <TextView
         android:id="@+id/signup_email_label"
         android:layout_width="wrap_content"
@@ -66,7 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/home_username_text" />
 
-    <!-- Email Input -->
     <EditText
         android:id="@+id/signup_email_input"
         android:layout_width="0dp"
@@ -84,7 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_email_label" />
 
-    <!-- Password Label -->
     <TextView
         android:id="@+id/signup_password_label"
         android:layout_width="wrap_content"
@@ -97,7 +91,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_email_input" />
 
-    <!-- Password Input Layout -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_password_layout"
         android:layout_width="0dp"
@@ -128,7 +121,6 @@
             android:textColorHint="@color/hintColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Confirm Password Label -->
     <TextView
         android:id="@+id/signup_confirm_password_label"
         android:layout_width="wrap_content"
@@ -141,7 +133,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_password_layout" />
 
-    <!-- Confirm Password Input Layout -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_confirm_password_layout"
         android:layout_width="0dp"
@@ -173,7 +164,6 @@
             android:textColorHint="@color/hintColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Signup Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signup_button"
         android:layout_width="0dp"
@@ -190,7 +180,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_confirm_password_layout" />
 
-    <!-- Login Link -->
     <TextView
         android:id="@+id/signup_login_link"
         android:layout_width="wrap_content"

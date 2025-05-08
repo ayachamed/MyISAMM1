@@ -36,8 +36,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         CategoryItem item = categoryItems.get(position);
         holder.categoryNameTextView.setText(item.getName());
-        // You can set icons dynamically here based on item.getId() or item.getName() if needed
-        // For now, a generic folder icon is fine.
         holder.categoryIconImageView.setImageResource(R.drawable.ic_folder_placeholder);
 
 

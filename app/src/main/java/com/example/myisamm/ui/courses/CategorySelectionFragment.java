@@ -125,7 +125,7 @@ public class CategorySelectionFragment extends Fragment {
                     if (categoryItemsList.isEmpty()) {
                         showEmptyView(getString(R.string.no_items_found));
                     } else {
-                        showEmptyView(null); // Hide empty view if items found
+                        showEmptyView(null);
                     }
                 }
                 adapter.notifyDataSetChanged();
