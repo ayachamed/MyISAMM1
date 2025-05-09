@@ -21,14 +21,13 @@
             android:layout_marginTop="32dp"
             android:contentDescription="@string/desc_profile_picture"
             android:scaleType="fitXY"
-            android:src="@drawable/building_placeholder"
+            android:src="@drawable/ic_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
             app:strokeColor="@color/teal_200"
-            app:strokeWidth="2dp"
-            tools:src="@drawable/ic_profile" />
+            app:strokeWidth="2dp"/>
 
         <TextView
             android:id="@+id/profile_username"
